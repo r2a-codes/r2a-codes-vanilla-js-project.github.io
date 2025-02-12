@@ -1,0 +1,41 @@
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(#0662cccc, #070791,#040446);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 500px;
+    height: 500px;
+border-radius: 10px ;
+}
+
+.wrapper img {
+    width: 100%;
+    height: 100%;
+border-radius: inherit ;
+}
+
+button{
+    width: 30px;
+    height: 30px;
+    padding: 2px;
+    margin: 5px;
+    font-size: 20px;
+    font-weight: 600;
+    background: #00000077;
+    color:  rgba(255,255,255,0.4);
+    border: 1px solid rgba(255,255,255,0.4);
+	border-radius: 50% ;
+transition: all 500ms easy-in-out;
+opacity: 0.5
+
+}
+
+ button:hover{
+    border: 1px solid  rgba(255,255,255,0.7);
+color:  rgba(255,255,255,0.7);
+} 

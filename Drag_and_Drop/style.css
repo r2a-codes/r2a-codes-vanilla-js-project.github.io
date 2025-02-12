@@ -1,0 +1,47 @@
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: #0a0a3ab6; 
+}
+
+.header{
+    margin-bottom: 20px;
+}
+
+h2{
+    color: #f0f8ff;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    width: 800px;
+    background: #0a0a3ab6; 
+}
+
+
+.wrapper{
+    width: 200px;
+    height: 500px;
+    background: #0a0a3adc; 
+    margin: 10px;
+}
+.draggableElement{
+    width: 90%;
+    height: 70px;
+    margin: 10px;
+    background: #b2b2f7e0; 
+    color: #f0f8ff;
+    text-align: center;
+    cursor: move;
+}
+
+.drag {
+    opacity: 0.5;
+}

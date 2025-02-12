@@ -1,0 +1,192 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+nav {
+  padding: 5px 0;
+  width: 100%;
+  background: #000e27;
+  color: aliceblue;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: space-evenly;
+}
+
+.logo-Container .r {
+  color: gold;
+  font-size: 25px;
+}
+
+.logo-Container .a {
+  color: #ff0800;
+  font-size: 25px;
+}
+.logo-Container > div {
+  color: #ffffff98;
+  font-size: 12px;
+}
+
+.logo-Container .sub-title {
+  color: #ffffff98;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+nav .nav-Wrapper {
+}
+
+.nav-Wrapper ul {
+  display: flex;
+}
+
+.nav-Wrapper ul li {
+  list-style: none;
+  margin-left: 20px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.search-Wrapper input {
+  padding: 5px 15px;
+  outline: none;
+  border: none;
+  background-color: transparent;
+  color: #ffffffc7;
+  border-bottom: 2px solid #ffffffc7;
+  text-align: center;
+}
+
+.hmWrapper {
+  display: none;
+}
+
+.container {
+  margin-top: 20%;
+  width: 100%;
+  background: yellow;
+  border: 5px solid black;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+/** Responsive media screen   */
+
+@media screen and (max-width: 900px) {
+  nav {
+    flex-direction: column;
+    transition: height 0.2s;
+  }
+
+  nav .logo-Container {
+    order: 1;
+    margin: 0 0 10px 10px;
+    align-self: flex-start;
+  }
+
+  nav .nav-Wrapper {
+    order: 3;
+    margin: 10px 0;
+    width: 100%;
+  }
+
+  .nav-Wrapper ul {
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+  }
+
+  .nav-Wrapper ul li {
+    margin: 5px 0;
+    width: 100%;
+    padding: 4px 0;
+  }
+
+  .nav-Wrapper ul li:hover {
+    background-color: #01124985;
+  }
+
+  .act1 {
+    display: none;
+  }
+
+  .act2 {
+    display: none;
+  }
+
+  .search-Wrapper {
+    order: 2;
+  }
+
+  .hmWrapper {
+    display: block;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 15px;
+    right: 30px;
+    cursor: pointer;
+  }
+
+  .hmWrapper .hm {
+    width: 100%;
+    height: 4px;
+    background: white;
+    border-radius: 3px;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: 0.6s ease-in;
+    pointer-events: none;
+  }
+
+  .hm::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #fffefe;
+    border-radius: 3px;
+    position: absolute;
+    top: -10px;
+    transition: 0.6s ease-in;
+  }
+
+  .hm::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: #fffefe;
+    border-radius: 3px;
+    position: absolute;
+    top: 10px;
+    transition: 0.6s ease-in;
+  }
+
+  /** Add Active class and cross*/
+
+  .hm.active {
+    visibility: hidden;
+    transition: 0.2s ease-in;
+  }
+
+  .hm.active::before {
+    transform: rotate(45deg);
+    top: 0;
+    visibility: visible;
+    transition: 0.6s ease-in;
+  }
+
+  .hm.active::after {
+    transform: rotate(-45deg);
+    top: 0;
+    visibility: visible;
+    transition: 0.6s ease-in;
+  }
+
+  .activated {
+    display: flex;
+    flex-direction: column;
+  }
+}
